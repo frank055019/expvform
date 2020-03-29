@@ -1,5 +1,5 @@
 import React from 'react';
-import {UserForm} from './component/UserForm'
+import {UserForm} from './components/UserForm'
 import './App.css';
 
 function App() {
