@@ -37,10 +37,10 @@ export class FormPersonalDetails extends Component {
 					/>
 					<br/>
 					<TextField
-						hintText='Enter Your Biq'
-						floatingLabelText='Biq'
-						onChange={handleChange('biq')}
-						defaultValue={values.biq}
+						hintText='Enter Your Bio'
+						floatingLabelText='Bio'
+						onChange={handleChange('bio')}
+						defaultValue={values.bio}
 					/>
 					<br/>
 					<RaisedButton

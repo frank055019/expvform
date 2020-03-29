@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import {FormUserDetails} from './FormUserDetails'
-import {FormPersonalDetails} from './FormPersonalDetails'
+import {FormUserDetails} from './FormUserDetails';
+import {FormPersonalDetails} from './FormPersonalDetails';
+import Confirm from './Confirm';
+import Success from './Success'
 
 export class UserForm extends Component {
 	constructor(){
@@ -33,9 +35,9 @@ export class UserForm extends Component {
 	render() {
 		const { step } =this.state;
 		const { firstName,lastName,email,occupation,
-			city,biq } =this.state;
+			city,bio } =this.state;
 		const values = { firstName,lastName,email,occupation,
-			city,biq } 
+			city,bio } 
 		
 		switch (step){
 			case 1:
@@ -55,9 +57,13 @@ export class UserForm extends Component {
 					values={values}
 					/>)
 			case 3:
-				return <h1>Confirm</h1>
+				return (<Confirm
+					nextStep={this.nextStep}
+					prevStep={this.prevStep}
+					values={values}
+					/>)
 			case 4:
-				return <h1>Success</h1>
+				return <Success />
 			default:
     console.log('Sorry, we are out of ' + step + '.');
 		}
